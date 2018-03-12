@@ -6,11 +6,11 @@ Randomly generate an acroyoga pose to jam with!
 
 #### Goals/Fixes
 
-[ ] Functionality works on Heroku
-[ ] Can add pose
-[ ] Log in
-[ ] Profile
-[ ] Filter shows only one copy of option
+* [ ] Functionality works on Heroku
+* [ ] Can add pose
+* [ ] Log in
+* [ ] Profile
+* [ ] Filter shows only one copy of option
 
 
 # Deploying to Heroku!
