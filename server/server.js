@@ -1,18 +1,21 @@
-const path = require('path')
 const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
 
-var cats = require('./routes/catsRoute')
+const poses = require('./routes/poses')
 
 const server = express()
+server.use(express.static('public'))
 
-server.use(cors('*'))
+server.use('/api/v1/poses', poses)
 
-server.use(bodyParser.json())
-server.use(express.static(path.join(__dirname, '../public')))
+const PORT = process.env.PORT || 3000
 
-server.use('/api/cats', cats)
-server.use('/api/characteristics', require('./routes/characteristicsRoute'))
+server.listen(PORT, () => {
+  console.log('Listening on port', PORT)
+})
 
 module.exports = server
+
+
+// const bodyParser = require('body-parser')
+
+// server.use(bodyParser.json())
