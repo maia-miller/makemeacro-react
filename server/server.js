@@ -14,8 +14,3 @@ server.listen(PORT, () => {
 })
 
 module.exports = server
-
-
-// const bodyParser = require('body-parser')
-
-// server.use(bodyParser.json())
